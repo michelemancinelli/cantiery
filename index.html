@@ -2,149 +2,130 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>CANTIERY — Prevedi, Controlla, Risparmia</title>
-  <meta name="description" content="CANTIERY: il metodo per non essere spettatore della ristrutturazione. Prevedi, controlla e risparmia senza diventare tecnico."/>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CANTIERY – Prevedi, Controlla, Risparmia</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <div class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html">
-        <img src="logo.jpg" alt="CANTIERY logo" />
-        <div>
-          <div style="font-weight:900; letter-spacing:.02em">CANTIERY</div>
-          <div class="tag">PREVEDI · CONTROLLA · RISPARMIA</div>
-        </div>
-      </a>
-
-      <div class="menu">
-        <a href="#metodo">Metodo</a>
-        <a href="#test">Test</a>
-        <a href="#download">Checklist</a>
-        <a href="chi-sono.html">Chi sono</a>
-      </div>
-
-      <a class="btn btn-primary btn-small" href="#test">Fai il test</a>
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="brand">
+      <img src="logo.png" alt="CANTIERY logo">
+      <span>CANTIERY</span>
     </div>
-  </div>
 
-  <!-- HERO -->
+    <nav>
+      <a href="#metodo">Metodo</a>
+      <a href="#test">Test</a>
+      <a href="chi-sono.html">Chi sono</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
 <section class="hero">
-  <h1>Non essere spettatore della tua ristrutturazione.<br>Diventa il pilota del tuo investimento.</h1>
-  <p>
-    Senza metodo, una ristrutturazione può bruciare i risparmi di una vita
-    o far fallire un investimento immobiliare.
-    CANTIERY ti insegna a prevedere, controllare e risparmiare.
-  </p>
-  <a href="#test" class="button">Scopri il tuo livello di rischio</a>
+  <div class="container hero-inner">
+    <h1>Non essere spettatore della tua ristrutturazione.</h1>
+    <p>
+      Senza metodo, una ristrutturazione può bruciare i risparmi di una vita  
+      o compromettere un investimento immobiliare per anni.
+    </p>
+
+    <a href="#test" class="btn-primary">Scopri il tuo livello di rischio</a>
+  </div>
 </section>
 
+<!-- METODO -->
+<section id="metodo" class="section light">
+  <div class="container">
+    <h2>Il metodo CANTIERY</h2>
+    <p class="section-desc">
+      Non devi diventare un tecnico.  
+      Devi solo essere il <strong>pilota</strong> del tuo progetto.
+    </p>
 
-  <!-- METODO -->
-  <section id="metodo" class="section">
-    <div class="container">
-      <div class="reveal">
-        <h2>Il metodo CANTIERY in 3 mosse</h2>
-        <p class="sub">Una guida semplice per guidare il progetto: prevedere rischi, controllare il processo, risparmiare eliminando inefficienze.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Prevedi</h3>
+        <p>Costi, tempi e criticità prima che diventino problemi.</p>
       </div>
-
-      <div class="grid-3">
-        <div class="card reveal">
-          <p class="title"><span class="dot"></span> PREVEDI</p>
-          <p>Scopri rischi tecnici ed economici prima della prima “picconata”. Se lo vedi prima, lo risolvi prima.</p>
-        </div>
-        <div class="card reveal">
-          <p class="title"><span class="dot"></span> CONTROLLA</p>
-          <p>Monitori tempi, costi e qualità. Non chiedi “come va”: sai cosa deve succedere e perché.</p>
-        </div>
-        <div class="card reveal">
-          <p class="title"><span class="dot"></span> RISPARMIA</p>
-          <p>Il risparmio non è materiale scadente: è eliminare sprechi, errori e lavori inutili. Meno errori = più margine.</p>
-        </div>
+      <div class="card">
+        <h3>Controlla</h3>
+        <p>Ogni fase del cantiere con criteri chiari e misurabili.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- TEST -->
-  <section id="test" class="section">
-    <div class="container split">
-      <div class="reveal">
-        <h2>Test rapido: che rischio stai correndo?</h2>
-        <p class="sub">
-          1 minuto. Risposte semplici. Alla fine ti dico se sei sotto controllo o se stai andando “a caso”.
-          Poi sblocchi la checklist del primo sopralluogo.
-        </p>
-        <a class="btn btn-primary" href="#quiz">🧠 Inizia ora</a>
-      </div>
-
-      <div class="reveal" id="quiz">
-        <div id="quizBox"></div>
-        <div id="quizResult" style="margin-top:12px;"></div>
+      <div class="card">
+        <h3>Risparmia</h3>
+        <p>Taglia sprechi invisibili e decisioni sbagliate.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- DOWNLOAD -->
-  <section id="download" class="section">
-    <div class="container split">
-      <div class="reveal">
-        <h2>Checklist gratuita: primo sopralluogo</h2>
-        <p class="sub">
-          Cosa guardare quando vedi un immobile per la prima volta, come capire lo stato reale e come valorizzarlo senza spendere “a caso”.
-        </p>
-        <div class="quote">
-          <b>Cosa contiene</b>
-          <p>✅ controlli rapidi · ✅ domande da fare · ✅ errori da evitare · ✅ priorità per valorizzare</p>
-        </div>
-      </div>
+<!-- TEST -->
+<section id="test" class="section">
+  <div class="container test-box">
+    <h2>Quanto stai rischiando davvero?</h2>
+    <p>
+      Rispondi a 5 domande e scopri se il tuo progetto è sotto controllo  
+      o se stai andando alla cieca.
+    </p>
 
-      <div class="reveal">
-        <div class="card" style="min-height:auto">
-          <p class="title"><span class="dot"></span> Scarica (demo)</p>
-          <p style="color:var(--muted); line-height:1.55">
-            Per ora il download è diretto. Poi (step successivo) lo trasformiamo in “scarica dopo email” con Formspree/Brevo.
-          </p>
-          <div style="display:flex; gap:12px; margin-top:14px; flex-wrap:wrap">
-            <a class="btn btn-primary" href="checklist.pdf" download>⬇️ Scarica la checklist</a>
-            <a class="btn" href="chi-sono.html">Perché funziona</a>
-          </div>
-          <p class="small" style="margin-top:10px;">Nota: carica nel repo il file <b>checklist.pdf</b> (stesso nome).</p>
-        </div>
-      </div>
+    <button class="btn-primary" onclick="startTest()">Inizia il test</button>
+
+    <div id="test-result" class="test-result"></div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="section light">
+  <div class="container download-box">
+    <h2>Checklist gratuita sopralluogo</h2>
+    <p>
+      La checklist che uso per capire se un immobile può essere valorizzato  
+      senza buttare soldi inutilmente.
+    </p>
+
+    <a href="checklist-cantiery.pdf" class="btn-secondary" download>
+      Scarica la checklist
+    </a>
+  </div>
+</section>
+
+<!-- CHI SONO -->
+<section class="section">
+  <div class="container about-preview">
+    <img src="michele.jpg" alt="Michele Mancinelli">
+
+    <div>
+      <h2>Chi sono</h2>
+      <p>
+        Sono <strong>Michele Mancinelli</strong>.  
+        Da anni affianco privati e investitori immobiliari  
+        per evitare errori strutturali, economici e decisionali  
+        nei cantieri.
+      </p>
+
+      <a href="chi-sono.html" class="btn-secondary">
+        Scopri la mia storia
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section class="section">
-    <div class="container reveal">
-      <div class="quote">
-        <b>Vuoi fare le cose con metodo?</b>
-        <p>
-          Se stai per acquistare, ristrutturare o investire, il momento di capire è <b>prima</b>, non dopo.
-          Scrivimi e ti dico da dove partire.
-        </p>
-        <div style="display:flex; gap:12px; margin-top:14px; flex-wrap:wrap">
-          <a class="btn btn-primary" href="mailto:info@cantiery.it">📩 Contattami</a>
-          <a class="btn" href="chi-sono.html">Chi sono</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 CANTIERY – Prevedi, Controlla, Risparmia</p>
+</footer>
 
-  <footer class="footer">
-    <div class="container">
-      © <span id="y"></span> CANTIERY — Prevedi · Controlla · Risparmia
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
-</body>
-</html>
-
+<!-- JS -->
+<script src="script.js"></script>
 </body>
 </html>
