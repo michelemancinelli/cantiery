@@ -1,117 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chi sono – CANTIERY</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chi sono — CANTIERY</title>
+  <meta name="description" content="La storia dietro CANTIERY: perché esiste il metodo Prevedi, Controlla, Risparmia." />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
   <!-- NAV -->
-  <div class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html">
-        <img src="logo.jpg" alt="CANTIERY logo">
-        <div>
-          <div style="font-weight:900">CANTIERY</div>
-          <div class="tag">PREVEDI · CONTROLLA · RISPARMIA</div>
-        </div>
-      </a>
+  <header class="nav">
+    <div class="nav-wrap">
+      <a class="nav-logo" href="index.html">CANTIERY</a>
 
-      <div class="menu">
-        <a href="index.html#metodo">Metodo</a>
-        <a href="index.html#test">Test</a>
-        <a href="index.html#download">Checklist</a>
-      </div>
-
-      <a class="btn btn-primary btn-small" href="index.html#test">Fai il test</a>
+      <nav class="nav-links">
+        <a href="index.html#metodo">Il metodo</a>
+        <a href="index.html#test">Scopri il tuo livello</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a class="nav-cta" href="index.html#contatti">Prenota</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="reveal">
-        <h1>Chi sono e perché ho creato CANTIERY</h1>
-        <p class="lead">
-          Ho creato CANTIERY perché ho visto troppe persone
-          affrontare ristrutturazioni e investimenti immobiliari
-          come semplici spettatori, pagando errori evitabili.
-        </p>
+  <!-- HERO CHI SONO -->
+  <section class="hero-prevedi" style="padding-bottom:42px;">
+    <div class="hero-wrap" style="grid-template-columns: 1fr 1fr;">
+      <!-- SINISTRA: card arancio + motto -->
+      <div class="hero-left">
+        <div class="hero-card-orange">
+          <div class="hero-brand">CANTIERY</div>
+          <div class="hero-title" style="text-transform:uppercase;">Chi sono</div>
+          <p class="hero-sub" style="max-width:620px;">
+            Il cantiere non va “seguito”. Va <b>controllato</b>.
+            Ho creato CANTIERY per aiutare privati e investitori a gestire ristrutturazioni con un metodo semplice:
+            <b>Prevedi → Controlla → Risparmia</b>.
+          </p>
+        </div>
 
-        <p class="lead">
-          Non serve diventare tecnici.
-          Serve un metodo per capire cosa guardare,
-          cosa chiedere e come decidere.
-        </p>
+        <div class="hero-copy" style="max-width:680px;">
+          <p>
+            Se oggi la ristrutturazione ti sembra “un salto nel vuoto”, non sei tu il problema.
+            Il problema è che spesso ti mancano <b>criteri</b> e <b>processo</b>: cosa guardare, cosa decidere, quando verificare.
+            Io trasformo il caos in un percorso più lineare: meno sorprese, più scelte pulite.
+          </p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="index.html#download">Scarica la checklist</a>
-          <a class="btn" href="index.html">Torna alla home</a>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="index.html#test">Fai il test (2 minuti) →</a>
+            <button class="btn btn-ghost" type="button" data-booking>Prenota su WhatsApp</button>
+          </div>
+
+          <div class="hero-micro">
+            Se non vedo valore concreto per te, te lo dico subito.
+          </div>
         </div>
       </div>
 
-      <!-- FOTO -->
-      <div class="panel reveal">
-        <img src="michele.jpg" alt="Michele Mancinelli" style="
-          width:100%;
-          border-radius:16px;
-          border:1px solid rgba(255,255,255,.12);
-        ">
+      <!-- DESTRA: foto + box -->
+      <div class="hero-right">
+        <div class="hero-media">
+          <img src="michele.jpg" alt="Foto profilo CANTIERY" />
+          <button class="watch-btn" type="button" data-scroll="#storia">La storia</button>
+        </div>
+
+        <div class="hero-benefits">
+          <div class="benefit-box">
+            <div class="benefit-title">Quello che faccio</div>
+            <p>
+              Porto metodo e controllo nella gestione lavori: riduco incertezza, varianti e sprechi.
+              Il focus è far prendere decisioni migliori <b>prima</b> che diventino costose.
+            </p>
+          </div>
+          <div class="benefit-box">
+            <div class="benefit-title">Per chi è</div>
+            <ul>
+              <li>Privati che ristrutturano casa</li>
+              <li>Investitori immobiliari (messa a reddito / rivendita)</li>
+              <li>Property manager e chi gestisce più lavori</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTO -->
-  <section class="section">
-    <div class="container split reveal">
-      <div>
-        <h2>Il problema vero</h2>
-        <p class="sub">
-          Quando non sai cosa controllare,
-          sei costretto a fidarti.
-          Ed è lì che nascono sprechi,
-          ritardi e decisioni sbagliate.
-        </p>
-
-        <p class="sub">
-          Per un privato significa rischiare
-          i risparmi di una vita.
-          Per un investitore significa
-          compromettere margini e futuro.
-        </p>
+  <!-- CONTENUTO -->
+  <section id="storia" class="section section-light">
+    <div class="container">
+      <div class="section-head">
+        <h2>La mia storia (in breve)</h2>
+        <p>Il punto non è “chi sono io”: è perché oggi CANTIERY ti evita errori che costano tempo e soldi.</p>
       </div>
 
-      <div>
-        <h2>La soluzione</h2>
-        <p class="sub">
-          CANTIERY nasce per trasformarti
-          nel pilota del tuo progetto,
-          dandoti strumenti chiari e pratici
-          per prendere decisioni consapevoli.
+      <div class="cards" style="grid-template-columns:repeat(2,1fr);">
+        <article class="card">
+          <div class="card-kicker">1</div>
+          <h3>Da dove sono partito</h3>
+          <p>
+            Ho visto tante ristrutturazioni partire bene e finire male per lo stesso motivo:
+            decisioni prese “a sentimento” e controlli fatti troppo tardi.
+            Quando capisci l’errore, spesso hai già pagato.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-kicker">2</div>
+          <h3>Il problema ricorrente</h3>
+          <p>
+            Extra lavori e varianti non nascono dal caso: nascono da <b>mancanza di chiarezza iniziale</b>
+            (stato reale, priorità, regole di decisione) e da un controllo non strutturato durante le fasi chiave.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-kicker">3</div>
+          <h3>La svolta</h3>
+          <p>
+            Ho iniziato a ragionare come un “controller”: prima mettiamo a fuoco rischi e priorità,
+            poi controlliamo le decisioni nei momenti giusti, e infine ottimizziamo sprechi e costi.
+            Così il cantiere diventa gestibile anche per un non tecnico.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-kicker">4</div>
+          <h3>Perché esiste CANTIERY</h3>
+          <p>
+            CANTIERY nasce per rendere replicabile questo processo.
+            Non servono “magie”: servono checklist, criteri, step di verifica e regole sulle varianti.
+            Il risultato è meno stress e più controllo reale.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE “PER CHI È / NON È” -->
+  <section class="section section-light" style="padding-top:0;">
+    <div class="container">
+      <div class="cards" style="grid-template-columns:repeat(2,1fr);">
+        <article class="card">
+          <div class="card-kicker">OK</div>
+          <h3>È per te se…</h3>
+          <p class="muted" style="margin-top:6px;">Vuoi chiarezza e controllo, senza diventare tecnico.</p>
+          <ul style="margin:10px 0 0; padding-left:18px; color:#475569; line-height:1.7;">
+            <li>Vuoi capire cosa chiedere e cosa controllare</li>
+            <li>Vuoi ridurre varianti ed extra non necessari</li>
+            <li>Vuoi prendere decisioni pulite prima di spendere</li>
+            <li>Vuoi un metodo semplice e replicabile</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-kicker">NO</div>
+          <h3>Non è per te se…</h3>
+          <p class="muted" style="margin-top:6px;">Cerchi scorciatoie o “miracoli”.</p>
+          <ul style="margin:10px 0 0; padding-left:18px; color:#475569; line-height:1.7;">
+            <li>Vuoi “fare tutto a occhio” senza numeri</li>
+            <li>Accetti varianti senza valutarne impatto</li>
+            <li>Vuoi solo il prezzo più basso senza criteri</li>
+            <li>Non vuoi mai mettere per iscritto le decisioni</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section class="section section-light" style="padding-top:0;">
+    <div class="container center">
+      <div class="gift" style="background:rgba(15,23,42,.03); border-color:rgba(15,23,42,.08);">
+        <h2>Vuoi capire dove stai perdendo controllo?</h2>
+        <p>
+          Fai il test gratuito e ottieni la tua dashboard. Se vuoi, poi mi scrivi su WhatsApp e chiarisco con te
+          le prossime 3 decisioni da sistemare.
         </p>
 
-        <div class="quote">
-          <b>Prevedi. Controlla. Risparmia.</b>
-          <p>
-            Non è uno slogan.
-            È un modo di affrontare ogni immobile
-            con lucidità e metodo.
-          </p>
+        <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:14px;">
+          <a class="btn btn-primary btn-big" href="index.html#test">Fai il test (2 minuti) →</a>
+          <button class="btn btn-ghost-dark btn-big" type="button" data-booking>Prenota su WhatsApp</button>
         </div>
+
+        <p class="muted" style="margin-top:10px;"><i>Nessun numero visibile sul sito: il contatto avviene solo cliccando il pulsante.</i></p>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="container">
-      © <span id="y"></span> CANTIERY — Prevedi · Controlla · Risparmia
+    <div class="container footer-wrap">
+      <div>© <span id="year"></span> CANTIERY</div>
+      <div class="footer-links">
+        <a href="index.html#metodo">Il metodo</a>
+        <a href="index.html#test">Test</a>
+        <a href="index.html#contatti">Prenota</a>
+      </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
-  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 </body>
 </html>
