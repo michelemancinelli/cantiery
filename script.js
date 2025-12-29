@@ -1,9 +1,8 @@
 /* =========================
-   CONFIG (puoi lasciare così)
+   CONFIG
    ========================= */
-const BOOKING_URL = ""; // se hai Calendly metti qui il link. Se vuoto, apre mail/WhatsApp.
-const EMAIL = "info@cantiery.it";
-const PHONE = "+39 0123 456789";
+const WHATSAPP_NUMBER = "393207214844"; // numero in formato internazionale (39 + tuo numero)
+const WHATSAPP_MSG = "Ciao! Vorrei prenotare una consulenza CANTIERY. Ti spiego il mio progetto:";
 const CHECKLIST_FILE = "checklist-primo-sopralluogo.pdf";
 
 /* =========================
@@ -12,27 +11,19 @@ const CHECKLIST_FILE = "checklist-primo-sopralluogo.pdf";
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
 
-function openBooking() {
-  if (BOOKING_URL && BOOKING_URL.trim().length > 0) {
-    window.open(BOOKING_URL, "_blank");
-    return;
-  }
-  // fallback: mailto + whatsapp
-  const msg = encodeURIComponent("Ciao! Vorrei prenotare una consulenza CANTIERY.");
-  const wa = `https://wa.me/${PHONE.replace(/\D/g, "")}?text=${msg}`;
-  // prova WhatsApp, se non va l'utente usa email
-  window.open(wa, "_blank");
+function openWhatsApp() {
+  const msg = encodeURIComponent(WHATSAPP_MSG);
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+  window.open(url, "_blank");
 }
 
 /* =========================
-   FOOTER YEAR + CONTACT TEXT
+   FOOTER YEAR
    ========================= */
 $("#year").textContent = new Date().getFullYear();
-$("#emailText").textContent = EMAIL;
-$("#phoneText").textContent = PHONE;
 
 /* =========================
-   SMOOTH SCROLL: Watch button
+   CLICK HANDLERS
    ========================= */
 document.addEventListener("click", function (e) {
   const watch = e.target.closest(".watch-btn");
@@ -43,7 +34,7 @@ document.addEventListener("click", function (e) {
   }
 
   const booking = e.target.closest("[data-booking]");
-  if (booking) openBooking();
+  if (booking) openWhatsApp();
 
   const openModalBtn = e.target.closest("[data-open-modal]");
   if (openModalBtn) openModal();
@@ -80,7 +71,7 @@ leadForm.addEventListener("submit", function (e) {
   leads.push(data);
   localStorage.setItem("cantiery_leads", JSON.stringify(leads));
 
-  // prova download
+  // download
   tryDownloadChecklist();
   closeModal();
 });
@@ -269,7 +260,7 @@ function getTips(scores) {
    ========================= */
 const quizRoot = $("#quizApp");
 let state = {
-  step: 0, // 0 start, 1 questions, 2 results
+  step: 0,
   current: 0,
   scores: { prev: 0, cont: 0, risp: 0 },
 };
@@ -341,7 +332,6 @@ function renderQuiz() {
     return;
   }
 
-  // RESULTS
   const total = state.scores.prev + state.scores.cont + state.scores.risp;
   const level = getLevel(total);
   const tips = getTips(state.scores);
@@ -370,14 +360,13 @@ function renderQuiz() {
       </div>
 
       <div class="result-actions">
-        <button class="btn btn-primary" type="button" data-booking>Prenota consulenza</button>
+        <button class="btn btn-primary" type="button" data-booking>Prenota su WhatsApp</button>
         <button class="btn btn-ghost-dark" type="button" data-open-modal>Scarica checklist</button>
         <button class="btn btn-ghost-dark" type="button" id="restartQuiz">Rifai il test</button>
       </div>
     </div>
   `;
 
-  // anima barre
   setTimeout(() => {
     $$(".bar-fill").forEach((el) => {
       el.style.width = el.getAttribute("data-w") + "%";
